@@ -1,7 +1,9 @@
 composer create-project --prefer-dist laravel/laravel MaisonneuveE2295298 "8.*"
 create database MaisonneuveE2295298
-// php artisan make:model EtudiantPost ???
-php artisan make:model Etudiant
 
-// php artisan make:migration create_etudiant_posts_table ???
+
+php artisan make:model Etudiant
 php artisan make:migration create_etudiants_table
+php artisan migrate
+
+php artisan make:factory VilleFactory

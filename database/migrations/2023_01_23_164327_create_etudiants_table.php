@@ -19,8 +19,9 @@ class CreateEtudiantsTable extends Migration
             $table->string("adresse", 200);
             $table->string("phone", 100);
             $table->string("email", 255)->uniqid();
-            $table->date("date_de_naissance", 255);
-            $table->integer("ville_id)");
+            $table->date("dateDeNaissance", 255);
+            $table->integer("villeId");
+            $table->timestamps();
         });
         // ->nullable(); ???
     }
