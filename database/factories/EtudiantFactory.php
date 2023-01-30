@@ -30,13 +30,6 @@ class EtudiantFactory extends Factory
             'phone' => $this->faker->tollFreePhoneNumber,
             'email' => $this->faker->unique()->email,
             'dateDeNaissance' => $this->faker->dateTimeThisCentury->format('Y-m-d'),
-            // 'villeId' => Ville::factory(),            
-            // 'villeId' => Ville::class::random()->select('id')->get()->factory()
-            // 'villeId' => Ville::factory()->select('id')->get()
-            // 'user_id' => User::factory(), //Generates a User from factory and extracts id
-            // 'villeId' => $this->faker->randomElement(DB::table('villes')->select('id')->get())
-            // 'villeId' => $this->faker->randomElement(DB::table('villes')->random()->id)
-            // 'villeId' => $this->faker->Ville::all()->random()->id
             'villeId' => $this->faker->randomElement($villesId)
         ];
     }

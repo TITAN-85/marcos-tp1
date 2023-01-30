@@ -15,7 +15,10 @@ class EtudiantController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $etudiants = Etudiant::all();
+        // $etudiants = Etudiant::all();
+        // return view('etudiant.index', ['etudiants' => $etudiants]);
+
+        $etudiants = Etudiant::select()->paginate(15);
         return view('etudiant.index', ['etudiants' => $etudiants]);
     }
 
@@ -113,5 +116,8 @@ class EtudiantController extends Controller
         ]);
         return redirect(route('etudiant.show', $newEtudiant->id));
     }
+
+
+    
 
 }

@@ -4,9 +4,9 @@
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-12 pt-2">
-            <a href="{{ route('etudiant.index') }}" class="btn btn-outline-primary">Retourner</a>
+    <div class="row justify-content-center">
+        <div class="col-3 pt-2">
+            <a href="{{ route('etudiant.index') }}" class="btn btn-outline-primary col-12 pt-2">Retourner</a>
             <h4 class="display-one mt-2">{{$etudiant->title}}</h4>
             <hr>
             <p><strong> Name:</strong> {{ $etudiant->nom }}</p>
@@ -27,12 +27,12 @@
 
     <div>
         <div class="row text-center ma-2">
-            <div class="col-6">
+            <div class="col-12">
 
 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Effacer un post
+                    Effacer l'etudiant
                 </button>
 
                 <a href="{{ route('etudiant.edit', $etudiant->id)}}" class="btn btn-success">Mettre a jour</a>
